@@ -3,11 +3,16 @@
 @section('title', 'Home')
 
 @section('content')
-
-    <div class="container-fluid p-0"> <!-- Use container-fluid for full width with no padding -->
-        <img src="{{ asset('images/forest.png') }}" alt="Forest" class="img-fluid" style="width: 100%; height: auto; object-fit: cover;"> <!-- Stretch width and maintain aspect ratio -->
-    </div>
     
+    <div class="hero">
+        <div class="hero-content"> <!-- Added a wrapper for left alignment -->
+            <h1>Preserve Our Forests, Protect Our Future</h1>
+            <p>Together, we can make a difference</p>
+            <p>Join Us in Our Mission Today</p>
+            <a href="#" class="btn btn-success rounded-pill">Contribute Now</a> <!-- Button for action -->
+        </div>
+    </div>
+
     <h1>About Us</h1>
 
     <h1>Best Seller</h1>
@@ -47,11 +52,46 @@
         </div>
     </div>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="console.log('Toggler clicked!')">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
     <style>
+        .hero {
+            background: url('{{ asset('images/forest.png') }}') no-repeat left center; /* Align image to the left */
+            background-size: cover; /* Cover the entire section */
+            height: 400px; /* Set height for the hero section */
+            position: relative; /* Ensure positioning context for text */
+            display: flex; /* Use flexbox to center text */
+            align-items: center; /* Center text vertically */
+            color: black; /* Text color */
+            text-align: center; /* Align text to the left */
+            margin-bottom: 20px; /* Add some space below the hero section */
+            width: 100%; /* Ensure the hero section takes the full width */
+            padding: 20px; /* Add some padding for the content */
+        }
+
+        .hero-content {
+            max-width: 600px; /* Optional: Set a max width for the content */
+        }
+
+        .hero h1 {
+            font-size: 2.5rem; /* Font size for the main text */
+            margin-bottom: 10px; /* Space below the main text */
+        }
+
+        .hero p {
+            font-size: 1.2rem; /* Font size for the secondary text */
+        }
+
+        @media (max-width: 768px) { /* Adjust height for smaller screens */
+            .hero {
+                height: 300px; /* Decrease height on smaller screens */
+            }
+        }
+
+        @media (max-width: 576px) { /* Further adjustments for extra small screens */
+            .hero {
+                height: 200px; /* Further decrease height */
+            }
+        }
+
         .card:hover {
             transform: translateY(-5px); /* Lift the card on hover */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
