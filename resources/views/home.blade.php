@@ -3,7 +3,7 @@
 @section('title', 'Home')
 
 @section('content')
-    
+
     <div class="hero">
         <div class="hero-content"> <!-- Added a wrapper for left alignment -->
             <h1>Preserve Our Forests, Protect Our Future</h1>
@@ -106,4 +106,7 @@
             transform: scale(1.05); /* Slightly enlarge button on hover */
         }
     </style>
+
+@include('layout.footer')
+    
 @endsection
