@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Models\Article;
 use App\Models\User;
+
+Auth::routes();
 
 // Default Routes
 Route::get('/home', function () {
@@ -27,12 +30,18 @@ Route::get('/account', function () {
     return view('account');
 })->name('account');
 
-// Voyager Admin Routes
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes(); // Automatically adds routes for Voyager's admin panel
-});
-
 // Protected Routes for Admin (Using Middleware)
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::resource('articles', ArticleController::class); // Admin can manage articles
 });
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
+$user = \App\Models\User::where('email', 'admin@gmail.com')->first();
+if (Hash::check('password', $user->password)) {
+    echo 'Password matches!';
+} else {
+    echo 'Password does not match.';
+}
