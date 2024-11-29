@@ -5,51 +5,108 @@
 @section('content')
 
     <div class="hero">
-        <div class="hero-content"> <!-- Added a wrapper for left alignment -->
+        <div class="hero-content">
             <h1>Preserve Our Forests, Protect Our Future</h1>
             <p>Together, we can make a difference</p>
             <p>Join Us in Our Mission Today</p>
-            <a href="#" class="btn btn-success rounded-pill">Contribute Now</a> <!-- Button for action -->
+            <a href="#" class="btn btn-success rounded-pill">Contribute Now</a>
         </div>
     </div>
 
-    <h1>About Us</h1>
+    <div class="container mt-5">
+        <h1>About EcoSense</h1>
+
+        <div class="row mt-4">
+            <!-- Left Column: Text Content -->
+            <div class="col-md-6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque dapibus arcu, non tincidunt nulla. Sed tincidunt, ligula non faucibus fringilla, magna eros tempor libero, non fringilla lorem dui in augue. Nam vehicula tortor orci, at tempus mi venenatis ac. Sed vel metus vitae odio condimentum scelerisque. Phasellus at orci vitae nisl pharetra pharetra. In eget risus nisl. Duis auctor hendrerit nisl, at interdum enim tempor sit amet.</p>
+
+                <p>Morbi aliquam dolor ac nisi elementum, id efficitur felis pharetra. Nullam sollicitudin sit amet eros vitae vestibulum. Phasellus vel velit vel orci vestibulum efficitur. Mauris non ante velit. Pellentesque facilisis, leo eget sollicitudin tincidunt, urna nisi auctor dui, at malesuada felis magna sit amet augue.</p>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div class="col-md-6">
+                <img src="{{ asset('images/butterfly.jpg') }}" class="img-fluid rounded" alt="EcoSense Image">
+            </div>
+        </div>
+
+    </div>
 
     <h1>Best Seller</h1>
 
-    <div class="row"> <!-- Start a Bootstrap row -->
-        <div class="col-md-4 d-flex justify-content-center"> <!-- Center the cards -->
-            <div class="card mb-4" style="width: 220px; height: 320px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"> <!-- Set larger width and height -->
-                <img src="{{ asset('images/lanyard.png') }}" class="card-img-top" alt="Product 1" style="height: 180px; object-fit: cover; border-radius: 10px;"> <!-- Increase height for the image -->
-                <div class="card-body d-flex flex-column justify-content-between"> <!-- Flexbox for spacing -->
+    <div class="row">
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card mb-4" style="width: 220px; height: 320px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <img src="{{ asset('images/lanyard.png') }}" class="card-img-top" alt="Product 1" style="height: 180px; object-fit: cover; border-radius: 10px;">
+                <div class="card-body d-flex flex-column justify-content-between">
                     <h5 class="card-title">Lanyard</h5>
                     <p class="card-text">$10.00</p>
-                    <a href="#" class="btn btn-success rounded-pill buy-now-btn">Buy Now!</a> <!-- Change to btn-success for green button -->
+                    <a href="#" class="btn btn-success rounded-pill buy-now-btn">Buy Now!</a>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4 d-flex justify-content-center"> <!-- Center the cards -->
-            <div class="card mb-4" style="width: 220px; height: 320px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"> <!-- Set larger width and height -->
-                <img src="{{ asset('images/earth.png') }}" class="card-img-top" alt="Product 2" style="height: 180px; object-fit: cover; border-radius: 10px;"> <!-- Increase height for the image -->
-                <div class="card-body d-flex flex-column justify-content-between"> <!-- Flexbox for spacing -->
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card mb-4" style="width: 220px; height: 320px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <img src="{{ asset('images/earth.png') }}" class="card-img-top" alt="Product 2" style="height: 180px; object-fit: cover; border-radius: 10px;">
+                <div class="card-body d-flex flex-column justify-content-between">
                     <h5 class="card-title">Earth Plush</h5>
                     <p class="card-text">$15.00</p>
-                    <a href="#" class="btn btn-success rounded-pill buy-now-btn">Buy Now!</a> <!-- Change to btn-success for green button -->
+                    <a href="#" class="btn btn-success rounded-pill buy-now-btn">Buy Now!</a>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4 d-flex justify-content-center"> <!-- Center the cards -->
-            <div class="card mb-4" style="width: 220px; height: 320px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"> <!-- Set larger width and height -->
-                <img src="{{ asset('images/tshirt.png') }}" class="card-img-top" alt="Product 3" style="height: 180px; object-fit: cover; border-radius: 10px;"> <!-- Increase height for the image -->
-                <div class="card-body d-flex flex-column justify-content-between"> <!-- Flexbox for spacing -->
+        <div class="col-md-4 d-flex justify-content-center">
+            <div class="card mb-4" style="width: 220px; height: 320px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <img src="{{ asset('images/tshirt.png') }}" class="card-img-top" alt="Product 3" style="height: 180px; object-fit: cover; border-radius: 10px;">
+                <div class="card-body d-flex flex-column justify-content-between">
                     <h5 class="card-title">Eco T-shirt</h5>
                     <p class="card-text">$20.00</p>
-                    <a href="#" class="btn btn-success rounded-pill buy-now-btn">Buy Now!</a> <!-- Change to btn-success for green button -->
+                    <a href="#" class="btn btn-success rounded-pill buy-now-btn">Buy Now!</a>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container mt-5">
+        <h1>Contact Us</h1>
+        
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <form action="{{ route('contact.submit') }}" method="POST">
+            @csrf
+
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" class="form-control" name="name" id="name" required>
+                @error('name')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+                @error('email')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label for="problem">Describe Your Problem</label>
+                <textarea class="form-control" name="problem" id="problem" rows="4" required></textarea>
+                @error('problem')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 
     <style>
@@ -105,8 +162,16 @@
             background-color: #4CAF50; /* Darker green on hover */
             transform: scale(1.05); /* Slightly enlarge button on hover */
         }
+
+        footer {
+        background: #f8f9fa;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: auto;
+        }
+
     </style>
 
 @include('layout.footer')
-    
+
 @endsection

@@ -30,18 +30,21 @@ Route::get('/account', function () {
     return view('account');
 })->name('account');
 
+Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
+Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
+
 // Protected Routes for Admin (Using Middleware)
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::resource('articles', ArticleController::class); // Admin can manage articles
 });
+
+Route::namespace('App\Http\Controllers\Admin')->group(function () {
+    Route::resource('products', ProductController::class);
+});
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
 $user = \App\Models\User::where('email', 'admin@gmail.com')->first();
-if (Hash::check('password', $user->password)) {
-    echo 'Password matches!';
-} else {
-    echo 'Password does not match.';
-}
