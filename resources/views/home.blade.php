@@ -4,174 +4,294 @@
 
 @section('content')
 
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Preserve Our Forests, Protect Our Future</h1>
-            <p>Together, we can make a difference</p>
-            <p>Join Us in Our Mission Today</p>
-            <a href="#" class="btn btn-success rounded-pill">Contribute Now</a>
-        </div>
+<!-- Hero Section -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Preserve Our Forests, Protect Our Future</h1>
+        <p>Together, we can make a difference</p>
+        <p>Join Us in Our Mission Today</p>
+        <a href="#" class="btn btn-success rounded-pill">Contribute Now</a>
     </div>
+</div>
 
-    <div class="container mt-5">
-        <h1>About EcoSense</h1>
-
-        <div class="row mt-4">
-            <!-- Left Column: Text Content -->
-            <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus scelerisque dapibus arcu, non tincidunt nulla. Sed tincidunt, ligula non faucibus fringilla, magna eros tempor libero, non fringilla lorem dui in augue. Nam vehicula tortor orci, at tempus mi venenatis ac. Sed vel metus vitae odio condimentum scelerisque. Phasellus at orci vitae nisl pharetra pharetra. In eget risus nisl. Duis auctor hendrerit nisl, at interdum enim tempor sit amet.</p>
-
-                <p>Morbi aliquam dolor ac nisi elementum, id efficitur felis pharetra. Nullam sollicitudin sit amet eros vitae vestibulum. Phasellus vel velit vel orci vestibulum efficitur. Mauris non ante velit. Pellentesque facilisis, leo eget sollicitudin tincidunt, urna nisi auctor dui, at malesuada felis magna sit amet augue.</p>
-            </div>
-
-            <!-- Right Column: Image -->
-            <div class="col-md-6">
-                <img src="{{ asset('images/butterfly.jpg') }}" class="img-fluid rounded" alt="EcoSense Image">
-            </div>
-        </div>
-
-    </div>
-
-    <h1>Best Seller</h1>
-
+<!-- About EcoSense Section -->
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-4 d-flex justify-content-center">
-            <div class="card mb-4" style="width: 220px; height: 320px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                <img src="{{ asset('images/lanyard.png') }}" class="card-img-top" alt="Product 1" style="height: 180px; object-fit: cover; border-radius: 10px;">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <h5 class="card-title">Lanyard</h5>
-                    <p class="card-text">$10.00</p>
-                    <a href="#" class="btn btn-success rounded-pill buy-now-btn">Buy Now!</a>
-                </div>
-            </div>
+        <!-- Left Column: Text Content -->
+        <div class="col-md-6 px-5">
+                <h1 class="text-center mt-4">About EcoSense</h1>
+
+            <p class="text-dark">
+                EcoSense is dedicated to promoting sustainability and eco-friendly practices. Our mission is to raise
+                awareness about environmental issues and provide resources for individuals and businesses to make a
+                positive impact on the planet. Join us in our journey to create a greener, cleaner world for future
+                generations.
+            </p>
+
+            <p class="text-dark">
+                Our platform offers a variety of eco-conscious products designed to reduce waste and promote
+                sustainability. We believe in making a difference through small, thoughtful changes in our daily lives.
+                Together, we can tackle climate change and protect our natural resources.
+            </p>
+
+            <p class="text-dark">
+                By supporting EcoSense, you're not just buying products – you're contributing to a larger cause. Every
+                purchase helps fund environmental initiatives, from reforestation to ocean clean-up projects. Together,
+                we can make a global impact.
+            </p>
         </div>
 
-        <div class="col-md-4 d-flex justify-content-center">
-            <div class="card mb-4" style="width: 220px; height: 320px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                <img src="{{ asset('images/earth.png') }}" class="card-img-top" alt="Product 2" style="height: 180px; object-fit: cover; border-radius: 10px;">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <h5 class="card-title">Earth Plush</h5>
-                    <p class="card-text">$15.00</p>
-                    <a href="#" class="btn btn-success rounded-pill buy-now-btn">Buy Now!</a>
-                </div>
-            </div>
+        <div class="col-md-6">
+            <img src="{{ asset('images/butterfly.jpg') }}" class="img-fluid shadow-lg full-width-image"
+                alt="EcoSense Image">
         </div>
+    </div>
+</div>
 
-        <div class="col-md-4 d-flex justify-content-center">
-            <div class="card mb-4" style="width: 220px; height: 320px; transition: transform 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                <img src="{{ asset('images/tshirt.png') }}" class="card-img-top" alt="Product 3" style="height: 180px; object-fit: cover; border-radius: 10px;">
-                <div class="card-body d-flex flex-column justify-content-between">
-                    <h5 class="card-title">Eco T-shirt</h5>
-                    <p class="card-text">$20.00</p>
-                    <a href="#" class="btn btn-success rounded-pill buy-now-btn">Buy Now!</a>
-                </div>
+<!-- Featured Products Section -->
+<h1 class="mt-5" style="text-align: center">Check Out Our Products</h1>
+
+<div class="row mt-4" style="margin-bottom: 10px;">
+    <!-- Product 1 -->
+    <div class="col-md-3 d-flex justify-content-center">
+        <div class="card product-card">
+            <img src="{{ asset('images/lanyard.png') }}" class="card-img-top" alt="Product 1">
+            <div class="card-body">
+                <h5 class="card-title">Lanyard</h5>
+                <p class="card-text">$10.00</p>
+                <a href="#" class="btn btn-success rounded-1">Buy Now</a>
             </div>
         </div>
     </div>
 
-    <div class="container mt-5">
-        <h1>Contact Us</h1>
-        
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
+    
+    <!-- Product 2 -->
+    <div class="col-md-3 d-flex justify-content-center">
+        <div class="card product-card">
+            <img src="{{ asset('images/earth.png') }}" class="card-img-top" alt="Product 2">
+            <div class="card-body">
+                <h5 class="card-title">Earth Plush</h5>
+                <p class="card-text">$15.00</p>
+                <a href="#" class="btn btn-success rounded-1">Buy Now</a>
             </div>
-        @endif
-
-        <form action="{{ route('contact.submit') }}" method="POST">
-            @csrf
-
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" class="form-control" name="name" id="name" required>
-                @error('name')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </div>
-
-            <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" class="form-control" name="email" id="email" required>
-                @error('email')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </div>
-
-            <div class="form-group">
-                <label for="problem">Describe Your Problem</label>
-                <textarea class="form-control" name="problem" id="problem" rows="4" required></textarea>
-                @error('problem')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
     </div>
 
-    <style>
-        .hero {
-            background: url('{{ asset('images/forest.png') }}') no-repeat left center; /* Align image to the left */
-            background-size: cover; /* Cover the entire section */
-            height: 400px; /* Set height for the hero section */
-            position: relative; /* Ensure positioning context for text */
-            display: flex; /* Use flexbox to center text */
-            align-items: center; /* Center text vertically */
-            color: black; /* Text color */
-            text-align: center; /* Align text to the left */
-            margin-bottom: 20px; /* Add some space below the hero section */
-            width: 100%; /* Ensure the hero section takes the full width */
-            padding: 20px; /* Add some padding for the content */
-        }
+    <div class="col-md-3 d-flex justify-content-center">
+        <div class="card product-card">
+            <img src="{{ asset('images/earth.png') }}" class="card-img-top" alt="Product 2">
+            <div class="card-body">
+                <h5 class="card-title">Earth Plush</h5>
+                <p class="card-text">$15.00</p>
+                <a href="#" class="btn btn-success rounded-1">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product 3 -->
+    <div class="col-md-3 d-flex justify-content-center">
+        <div class="card product-card">
+            <img src="{{ asset('images/tshirt.png') }}" class="card-img-top" alt="Product 3">
+            <div class="card-body">
+                <h5 class="card-title">Eco T-shirt</h5>
+                <p class="card-text">$20.00</p>
+                <a href="#" class="btn btn-success rounded-1">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-        .hero-content {
-            max-width: 600px; /* Optional: Set a max width for the content */
-        }
 
+<!-- Contact Us Section -->
+<div class="container-fluid mt-5 mx-5">
+    <h1 class="mt-5" style="text-align: center"> Contact Us</h1>
+
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    <form action="{{ route('contact.submit') }}" method="POST" style="max-width: 1000px;">
+        @csrf
+
+        <div class="form-group">
+            <label for="name" class="font-weight-bold">Name</label>
+            <input type="text" class="form-control shadow-sm" name="name" id="name" required>
+            @error('name')
+                <div class="alert alert-danger mt-2">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="font-weight-bold">Email</label>
+            <input type="email" class="form-control shadow-sm" name="email" id="email" required>
+            @error('email')
+                <div class="alert alert-danger mt-2">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <div class="form-group">
+            <label for="problem" class="font-weight-bold">Describe Your Problem</label>
+            <textarea class="form-control shadow-sm" name="problem" id="problem" rows="4" required></textarea>
+            @error('problem')
+                <div class="alert alert-danger mt-2">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <button type="submit" class="btn btn-success btn-lg mt-4" style="width: 300px;">Submit</button>
+    </form>
+</div>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .hero {
+        background: url('{{ asset('images/forest.png') }}') no-repeat center center;
+        background-size: cover;
+        height: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .hero .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col-md-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .product-card img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .product-card .card-body {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .buy-now-btn {
+        transition: background-color 0.3s, transform 0.3s;
+        width: 100px;
+    }
+
+    .buy-now-btn:hover {
+        background-color: #4CAF50;
+        transform: scale(1.05);
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .form-control {
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
         .hero h1 {
-            font-size: 2.5rem; /* Font size for the main text */
-            margin-bottom: 10px; /* Space below the main text */
+            font-size: 2.5rem;
         }
 
         .hero p {
-            font-size: 1.2rem; /* Font size for the secondary text */
+            font-size: 1.2rem;
         }
+    }
 
-        @media (max-width: 768px) { /* Adjust height for smaller screens */
-            .hero {
-                height: 300px; /* Decrease height on smaller screens */
-            }
+    @media (max-width: 576px) {
+        .hero {
+            height: 250px;
         }
+    }
 
-        @media (max-width: 576px) { /* Further adjustments for extra small screens */
-            .hero {
-                height: 200px; /* Further decrease height */
-            }
-        }
+    .full-width-image {
+        width: 100%;
+        height: auto;
+        max-height: 700px;
+        /* Adjust this value to reduce the height */
+        object-fit: cover;
+    }
 
-        .card:hover {
-            transform: translateY(-5px); /* Lift the card on hover */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
-        }
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+    }
 
-        .buy-now-btn {
-            transition: background-color 0.3s, transform 0.3s; /* Transition for smooth hover effects */
-        }
+    p {
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
 
-        .buy-now-btn:hover {
-            background-color: #4CAF50; /* Darker green on hover */
-            transform: scale(1.05); /* Slightly enlarge button on hover */
-        }
+    .lead {
+        font-size: 1.3rem;
+    }
 
-        footer {
-        background: #f8f9fa;
-        padding: 20px 0;
-        text-align: center;
-        margin-top: auto;
-        }
+    .text-muted {
+        color: #6c757d;
+    }
 
-    </style>
+    .text-dark {
+        color: #333;
+    }
 
-@include('layout.footer')
+    .text-success {
+        color: #28a745;
+    }
+</style>
 
 @endsection

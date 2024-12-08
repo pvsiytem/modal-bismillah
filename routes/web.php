@@ -30,6 +30,10 @@ Route::get('/account', function () {
     return view('account');
 })->name('account');
 
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
+
 Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 

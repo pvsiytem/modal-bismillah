@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,103 +8,117 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <title>Home</title>
     <style>
+        /* Light green themed navbar */
         .navbar {
-            background: url('/images/wavey.png') no-repeat; /* Background image */
-            background-position: -700px center; /* Shift background to the left by 710px */
-            background-size: auto; /* Ensure the image covers the navbar */
-            height: 60px; /* Set a height for the navbar */
-            position: relative; /* Ensure positioning context for the absolute child */
+            background-color: #d4edda;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .navbar-bg {
-            background: url('/images/polka-dot.png') no-repeat center center; /* Center the polka dot background */
-            background-size: 120% 100%; /* Stretch the width to 120% and keep height 100% */
-            height: 60px; /* Set a height for the background */
-            position: absolute; /* Absolute positioning */
-            top: 0; /* Align to the top of the navbar */
-            left: 0; /* Align to the left */
-            right: 0; /* Align to the right */
-            bottom: 0; /* Align to the bottom */
-            z-index: -1; /* Send the background behind the content */
+        .navbar .navbar-brand {
+            color: #155724;
+            font-weight: bold;
+            font-size: 1.5rem;
         }
 
-        .navbar-nav {
-            margin-left: 20px; /* Adjust this value to move the nav items to the right */
+        .navbar .navbar-brand img {
+            height: 40px;
         }
 
-        .navbar-nav .nav-link {
-            color: black !important; /* Set navbar text color to black */
-            font-size: 1.1rem; /* Adjust font size for navigation links */
+        .navbar .nav-link {
+            color: #155724;
+            font-weight: 500;
+            margin: 0 10px;
+            padding-bottom: 2px;
+
+            transition: all 0.3s ease-in-out;
         }
 
-        .navbar-nav .nav-link:hover {
-            color: white !important; /* Change text color to white on hover */
+        .navbar .nav-link:hover {
+            color: #1b925a;
         }
 
-        .navbar-brand {
-            color: black !important; /* Set navbar brand text color to black */
+        .navbar .nav-link.active {
+            color: #0c4128;
+            font-weight: bold;
+            border-bottom: 2px solid #0c4128;
+            padding-bottom: 0;
         }
 
-        .navbar-brand:hover {
-            color: white !important; /* Change brand text color to white on hover */
+        .navbar-toggler {
+            border: none;
         }
 
-        .search-form {
-            margin-left: auto; /* Move search form to the right */
-            margin-right: 20px; /* Add space on the right */
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(21,87,36, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
+
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(21, 87, 36, 0.5);
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        @media (max-width: 991px) {
+
+            .navbar-nav .nav-link.active {
+                border-bottom: none;
+            }
     </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="navbar-bg"></div> <!-- Background for the navbar -->
-        <a class="navbar-brand" href="#">
-            <h3 class="mb-0">EcoSense</h3>
-        </a>
-        <!-- Move ms-auto to navbar-toggler for alignment on the right -->
-        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Add text-end class to align items to the right in the collapsible menu -->
-            <ul class="navbar-nav ms-auto text-end">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('article') }}">Article</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('merchandise') }}">Merchandise</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contribute') }}">Contribute</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Account
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Account</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="search-form"> <!-- New div for search form -->
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ route('home') }}">
+                <img src="images/logo.png" alt="Brand Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}"
+                            href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::routeIs('article') ? 'active' : '' }}"
+                            href="{{ route('article') }}">Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::routeIs('merchandise') ? 'active' : '' }}"
+                            href="{{ route('merchandise') }}">Merchandise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::routeIs('contribute') ? 'active' : '' }}"
+                            href="{{ route('contribute') }}">Contribute</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ Request::routeIs('profile') ? 'active' : '' }}"
+                            href="{{ route('profile') }}">Profile</a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </nav>
+
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
