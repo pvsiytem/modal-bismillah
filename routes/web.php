@@ -34,6 +34,10 @@ Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
 
+Route::get('/profileUpdate', function () {
+    return view('profileUpdate');
+})->name('profileUpdate');
+
 Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 
@@ -51,4 +55,4 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-$user = \App\Models\User::where('email', 'admin@gmail.com')->first();
+// $user = \App\Models\User::where('email', 'admin@gmail.com')->first();
